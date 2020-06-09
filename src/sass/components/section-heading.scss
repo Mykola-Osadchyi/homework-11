@@ -1,0 +1,27 @@
+.section-title {
+  font-size: 30px;
+  font-family: $first-font;
+  color: $sixth-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include text-settings();
+
+  &::after {
+    content: '';
+    margin: 40px auto 66px;
+    display: block;
+    background-color: $first-color;
+    width: 60px;
+    height: 3px;
+  }
+
+  &__upper-text {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-family: $second-font;
+    color: $sixth-color;
+    @include text-settings();
+    text-transform: none;
+  }
+}

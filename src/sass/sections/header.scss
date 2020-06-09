@@ -1,0 +1,144 @@
+.header {
+  padding: 30px 0px 224px 0px;
+  background-image: linear-gradient(
+      rgba(243, 129, 129, 0.9),
+      rgba(252, 227, 138, 0.9)
+    ),
+    url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        rgba(243, 129, 129, 0.9),
+        rgba(252, 227, 138, 0.9)
+      ),
+      url(../images/banner@2x.jpg);
+  }
+  &__navigation {
+    margin-bottom: 152px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-logo {
+  font-size: 30px;
+  font-family: $first-font;
+  color: $seventh-color;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: left;
+}
+
+.site-menu--header {
+  margin-left: auto;
+  margin-right: 56px;
+}
+
+.site-menu__item:not(:last-child),
+.additional-menu__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.site-menu__link {
+  font-size: 14px;
+  font-family: $first-font;
+  color: $seventh-color;
+  text-transform: uppercase;
+  @include text-settings();
+  font-weight: 400;
+  position: relative;
+
+  &::after {
+    @extend %site-menu-after;
+  }
+
+  &:hover {
+    color: $second-color;
+    transition: color 200ms linear;
+    
+    &::after {
+      @extend %hover-site-menu-after;
+    }
+  }
+}
+
+.additional-menu__link {
+  position: relative;
+
+  &::after {
+    @extend %site-menu-after;
+  }
+
+  &:hover::after {
+    @extend %hover-site-menu-after;
+  }
+}
+
+.button--search {
+  display: block;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+
+  &::after {
+    @extend %site-menu-after;
+  }
+
+  &:hover::after {
+    @extend %hover-site-menu-after;
+  }
+}
+
+.additional-menu__item-svg {
+  width: 18px;
+  height: 18px;
+  fill: $seventh-color;
+
+  &:hover {
+    fill: $second-color;
+    transition: fill 200ms linear;
+  }
+}
+
+.site-heading {
+  margin: 0px 0px 90px 0px;
+
+  &__part {
+    display: block;
+    font-size: 150px;
+    font-family: $first-font;
+    color: $seventh-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include text-settings();
+
+    &--upper-text {
+      margin-bottom: 20px;
+      font-size: 72px;
+      text-transform: none;
+      font-family: $second-font;
+    }
+    &--sub-text {
+      margin-top: -42px;
+    }
+  }
+}
+
+.link--learn-more {
+  font-size: 14px;
+  font-family: $first-font;
+  color: $seventh-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include text-settings($lh: 18px);
+  border: 3px solid $seventh-color;
+  background-color: rgba(0, 0, 0, 0);
+  width: 164px;
+  padding: 10px 0px;
+  margin: 0 auto;
+  display: block;
+}

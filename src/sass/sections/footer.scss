@@ -1,0 +1,66 @@
+.main-footer {
+  padding: 10px 0px 12px 0px;
+  @include center-flex($type: 'ver');
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: #e5e5e5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 1px;
+  }
+
+  &__info {
+    font-size: 14px;
+    font-family: $first-font;
+    color: $sixth-color;
+    line-height: 1.2;
+    font-weight: 700;
+
+    &-link {
+      color: $first-color;
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-user-email {
+  border-top: 1px solid #e7e7e7;
+  border-left: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-right: none;
+  width: 234px;
+  height: 40px;
+  font-family: $third-font;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 14px;
+
+  &::placeholder {
+    font-size: 15px;
+    color: #cccccc;
+    font-family: $third-font;
+    font-style: italic;
+    line-height: 1.6;
+  }
+}
+
+.contact-form-button {
+  font-size: 14px;
+  font-family: $first-font;
+  color: $seventh-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include text-settings();
+  background-color: $fourth-color;
+  width: 150px;
+  height: 40px;
+}

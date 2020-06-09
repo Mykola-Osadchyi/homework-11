@@ -1,0 +1,112 @@
+.team {
+  padding-top: 52px;
+  padding-bottom: 82px;
+
+  &__list {
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 380px;
+    &-photo-wrapper {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    &-photo {
+      background-color: $fourth-color;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-10px, -10px);
+      transition: opacity 200ms linear, transform 200ms linear;
+    }
+    &:hover .team__item-photo {
+      box-shadow: 10px 10px 0px 0px $fourth-color;
+      transform: translate(-10px, -10px);
+      transition: transform 200ms linear, box-shadow 200ms linear;
+    }
+
+    &-name {
+      font-size: 14px;
+      font-family: $first-font;
+      font-weight: 700;
+      color: $sixth-color;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    &-position {
+      font-size: 15px;
+      font-family: $third-font;
+      color: $fifth-color;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      text-align: center;
+    }
+  }
+}
+
+.section-title--after::after {
+  margin-bottom: 44px;
+}
+
+.section__description {
+  max-width: 980px;
+  margin: 0 auto 90px;
+  font-size: 15px;
+  font-family: $third-font;
+  color: $fifth-color;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(243, 129, 129, 0.9),
+    rgba(252, 227, 138, 0.9)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include center-flex('all');
+  visibility: hidden;
+  opacity: 0;
+}
+
+.social-list__item-link {
+  width: 58px;
+  height: 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $third-color;
+  transition: background-color 200ms linear;
+  @include center-flex('all');
+
+  &:hover {
+    background-color: $first-color;
+  }
+}
+
+.social-list__item:not(:last-child) {
+  border-right: 1px solid rgba(243, 129, 129, 0.5);
+}
+
+.social-list__item-icon {
+  width: 26px;
+  height: 26px;
+  fill: $first-color;
+  transition: fill 200ms linear;
+}
+
+.social-list__item:hover .social-list__item-icon {
+  fill: $seventh-color;
+}
